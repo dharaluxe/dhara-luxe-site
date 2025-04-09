@@ -1,0 +1,115 @@
+// Dhara Luxe Homepage Layout + Waitlist UI (Enhanced)
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-[#f8f5f2] text-[#2c2c2c] font-sans relative pb-16">
+      {/* Sticky Waitlist CTA */}
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md bg-black text-white text-center py-3 px-4 rounded-full shadow-lg">
+        🌿 Pre-launch open → <a href="#waitlist" className="underline ml-1">Join the waitlist</a>
+      </div>
+
+      {/* Hero Section */}
+      <section className="px-6 py-20 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Carry Your Consciousness</h1>
+        <p className="text-lg md:text-xl mb-6 max-w-xl mx-auto">
+          Eco-luxe handbags crafted from cactus, cork & coconut leather.
+        </p>
+        <a
+          href="#waitlist"
+          className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-[#2c2c2c] transition"
+        >
+          Join the Waitlist
+        </a>
+      </section>
+
+      {/* Visual Storytelling Section */}
+      <section className="bg-[#efece9] px-6 py-12 text-center">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div>
+            <div className="text-3xl mb-2">♻️</div>
+            <h4 className="text-lg font-semibold mb-1">Sustainable by Soul</h4>
+            <p className="text-sm text-gray-600">Every material chosen with earth in mind.</p>
+          </div>
+          <div>
+            <div className="text-3xl mb-2">🧵</div>
+            <h4 className="text-lg font-semibold mb-1">Handcrafted by Artisans</h4>
+            <p className="text-sm text-gray-600">Rooted in Indian craft, refined for the world.</p>
+          </div>
+          <div>
+            <div className="text-3xl mb-2">✨</div>
+            <h4 className="text-lg font-semibold mb-1">Luxury without Cruelty</h4>
+            <p className="text-sm text-gray-600">Plant-based. Powerful. Premium.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Preview */}
+      <section className="bg-white px-6 py-16">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12">Meet Our Signature Styles</h2>
+        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {["Aranya", "Aabha", "Vrishti", "Ira"].map((bag, index) => (
+            <div key={bag} className="text-center">
+              <img
+                src={`https://dharaluxe-assets.s3.amazonaws.com/bag-${index + 1}.png`}
+                alt={`The ${bag}`}
+                className="h-48 w-full object-cover rounded-xl mb-3"
+              />
+              <h3 className="text-lg font-medium">The {bag}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="px-6 py-16 bg-[#fffdfc] text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Words from Her</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <p className="italic text-gray-700 mb-4">“Finally a brand that understands style and sustainability.”</p>
+            <span className="text-sm font-semibold text-gray-500">— Ayesha, Mumbai</span>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <p className="italic text-gray-700 mb-4">“The Aranya Tote is my new go-to. It feels rich and real.”</p>
+            <span className="text-sm font-semibold text-gray-500">— Rhea, Bangalore</span>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <p className="italic text-gray-700 mb-4">“Eco-friendly never looked this luxe!”</p>
+            <span className="text-sm font-semibold text-gray-500">— Meera, Delhi</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Preview Section */}
+      <section className="px-6 py-16 bg-white text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Follow Us @dharaluxe.co</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          {[1, 2, 3, 4].map((post) => (
+            <div key={post} className="h-60 bg-[#d8d5d0] rounded-lg"></div>
+          ))}
+        </div>
+      </section>
+
+      {/* Waitlist Section */}
+      <section id="waitlist" className="px-6 py-16 bg-[#f1ece7] text-center">
+        <h2 className="text-3xl font-semibold mb-4">Be the First to Know</h2>
+        <p className="mb-6">Join our waitlist to get early access & exclusive launch perks.</p>
+        <form className="max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="w-full p-3 rounded-lg border border-gray-300 mb-4"
+          />
+          <button
+            type="submit"
+            className="w-full bg-black text-white p-3 rounded-lg hover:bg-[#2c2c2c] transition"
+          >
+            Join Now
+          </button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm py-6 text-gray-500">
+        © 
+::contentReference[oaicite:2]{index=2}
+ 
