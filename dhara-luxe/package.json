@@ -1,0 +1,20 @@
+{
+  "name": "dhara-luxe",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:admin": "npm --prefix apps/admin run dev",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:admin\"",
+    "build:web": "npm --prefix apps/web run build",
+    "build:admin": "npm --prefix apps/admin run build",
+    "build": "npm run build:web && npm run build:admin",
+    "lint": "npm --prefix apps/web run lint && npm --prefix apps/admin run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

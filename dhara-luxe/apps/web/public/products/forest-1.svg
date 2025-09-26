@@ -1,0 +1,7 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#f7f5f2"/>
+  <rect x="260" y="380" width="680" height="780" rx="56" fill="#2b4a34"/>
+  <rect x="310" y="440" width="580" height="110" rx="36" fill="#1f3827"/>
+  <circle cx="900" cy="540" r="6" fill="#142419"/>
+  <text x="50%" y="92%" dominant-baseline="middle" text-anchor="middle" font-family="'Times New Roman', Georgia, serif" font-size="44" fill="#21412a">Crossbody — Forest</text>
+</svg>
