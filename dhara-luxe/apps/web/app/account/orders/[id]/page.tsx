@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { PageProps } from "next";
 import { getSupabaseServer } from "@/lib/supabaseServer";
 
 async function getOrder(id: string) {
@@ -11,8 +12,11 @@ async function getOrder(id: string) {
   return data as any | null;
 }
 
-export default async function OrderDetailPage({ params }: { params: { id: string } }) {
-  const order = await getOrder(params.id);
+type Params = { id: string };
+
+export default async function OrderDetailPage({ params }: PageProps<Params>) {
+  const { id } = await params;               // 👈 Next 15: await params
+  const order = await getOrder(id);
   const fmt = new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   if (!order) {
